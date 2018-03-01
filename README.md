@@ -8,9 +8,7 @@ The following challenges demonstrate the basic capabilities the TJBot offers. Co
 * [Speech to Text](speech-to-text.md)
 * [Visual Recognition](visual-recognition.md)
 
-Access the TJBot simulator at [ibm.biz/meet-tjbot](https://ibm.biz/meet-tjbot)
-
-Please keep in mind the simulated TJBot is a simulated Node.js environment. Code is executed in the browser, except for API calls which are proxied via an IBM Bluemix application. API credentials are not stored in this proxy.
+Please keep in mind the simulated TJBot is a simulated Node.js environment. Code is executed in the browser, except for API calls which are proxied via an IBM Cloud application. API credentials are not stored in this proxy.
 
 Feel free to complete more than one of these challenges, even combining them together. Here are some things to keep in mind.
 

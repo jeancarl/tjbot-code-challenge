@@ -4,9 +4,9 @@ TJBot can recognize objects and colors in an image with the help of the [Watson 
 
 ## Create a Watson Visual Recognition service
 
-1. Sign up for an IBM Bluemix account at [bluemix.net](https://bluemix.net). If you already have an IBM Bluemix account, sign in.
+1. Sign up for an IBM Cloud account at [bluemix.net](https://bluemix.net). If you already have an IBM Cloud account, sign in.
 
-2. Click on the __Catalog__ link in the top right corner of the Bluemix dashboard.
+2. Click on the __Catalog__ link in the top right corner of the IBM Cloud dashboard.
 
 3. Select the __Visual Recognition__ service tile under the __Watson__ section of the catalog.
 
@@ -17,7 +17,7 @@ TJBot can recognize objects and colors in an image with the help of the [Watson 
 
 	![](assets/sidebar-stt.png)
 	
-6. Click on __View Credentials__ to display the credentials. Copy the api_key credential into the `.env` file in the simulator.
+6. Click on __View Credentials__ to display the credentials (note: if no credentials are listed, click on __New credential__ to create a new set). Copy the api_key credential into the `.env` file in the simulator.
 
 	![](assets/servicecredentials-vr.png)
 	
@@ -43,7 +43,7 @@ For each step, REPLACE the placeholders `/* step ## */` with the suggested code.
 	/* step #4 */
 	```
 		
-1. Enable TJBot to use the camera hardware by adding the string `"camera"` as an array element.
+2. Enable TJBot to use the camera hardware by adding the string `"camera"` as an array element.
 	
 	```
 	var tj = new TJBot(
@@ -51,7 +51,7 @@ For each step, REPLACE the placeholders `/* step ## */` with the suggested code.
 	  {},
 	```
 			
-1. Configure the Watson Visual Recognition credentials TJBot should use to classify the image. Earlier we stored them into an environment variable. 
+3. Configure the Watson Visual Recognition credentials TJBot should use to classify the image. Earlier we stored them into an environment variable. 
 
 	```
 	  visual_recognition: {
@@ -59,7 +59,7 @@ For each step, REPLACE the placeholders `/* step ## */` with the suggested code.
 	  }
 	```
 	
-1. We now have a TJBot configured to recognize objects. Call the `see` method. This will use the webcam, capture a picture, and classify it with the Watson Visual Recogntion service. A callback function will be passed an array of objects and confidence scores.
+4. We now have a TJBot configured to recognize objects. Call the `see` method. This will use the webcam, capture a picture, and classify it with the Watson Visual Recogntion service. A callback function will be passed an array of objects and confidence scores.
 
 	```
 	tj.see(objects => {
@@ -67,4 +67,4 @@ For each step, REPLACE the placeholders `/* step ## */` with the suggested code.
 	});
 	```
 	
-1. Run the code by clicking on the play icon. Did TJBot recognize objects and colors, and output the results into the console? You've completed this challenge.
+5. Run the code by clicking on the play icon. Did TJBot recognize objects and colors, and output the results into the console? You've completed this challenge.

@@ -4,9 +4,9 @@ TJBot can listen using the microphone and with the help of the [Watson Speech to
 
 ## Create a Watson Speech to Text service
 
-1. Sign up for an IBM Bluemix account at [bluemix.net](https://bluemix.net). If you already have an IBM Bluemix account, sign in.
+1. Sign up for an IBM Cloud account at [bluemix.net](https://bluemix.net). If you already have an IBM Cloud account, sign in.
 
-2. Click on the __Catalog__ link in the top right corner of the Bluemix dashboard.
+2. Click on the __Catalog__ link in the top right corner of the IBM Cloud dashboard.
 
 3. Select the __Speech to Text__ service tile under the __Watson__ section of the catalog.
 
@@ -17,7 +17,7 @@ TJBot can listen using the microphone and with the help of the [Watson Speech to
 
 	![](assets/sidebar-tts.png)
 	
-6. Click on __View Credentials__ to display the credentials. Copy the username and password credentials into the `.env` file in the simulator.
+6. Click on __View Credentials__ to display the credentials (note: if no credentials are listed, click on __New credential__ to create a new set). Copy the username and password credentials into the `.env` file in the simulator.
 
 	![](assets/servicecredentials-stt.png)
 	
@@ -44,7 +44,7 @@ For each step, REPLACE the placeholders `/* step ## */` with the suggested code.
 	/* step #4 */
 	```
 
-1. Enable TJBot to use the microphone hardware by adding the string `"microphone"` as an array element.
+2. Enable TJBot to use the microphone hardware by adding the string `"microphone"` as an array element.
 	
 	```
 	var tj = new TJBot(
@@ -53,7 +53,7 @@ For each step, REPLACE the placeholders `/* step ## */` with the suggested code.
 	...
 	```
 		
-1. Configure the Watson Speech to Text credentials TJBot should use to listen. Earlier we stored them into an environment variable. 
+3. Configure the Watson Speech to Text credentials TJBot should use to listen. Earlier we stored them into an environment variable. 
 
 	```
 	    speech_to_text: {
@@ -62,7 +62,7 @@ For each step, REPLACE the placeholders `/* step ## */` with the suggested code.
 	    }
 	```
 	
-1. We now have a TJBot configured to listen. Call the `listen` method. When TJBot transcribes text, a callback function will be passed the text TJBot heard. Call stopListening after the first utterance is heard.
+4. We now have a TJBot configured to listen. Call the `listen` method. When TJBot transcribes text, a callback function will be passed the text TJBot heard. Call stopListening after the first utterance is heard.
 
 	```
 	tj.listen((text) => {
@@ -71,4 +71,4 @@ For each step, REPLACE the placeholders `/* step ## */` with the suggested code.
 	});
 	```
 	
-1. Run the code by clicking on the play icon. Did TJBot listen and output the text into the console? You've completed this challenge.
+5. Run the code by clicking on the play icon. Did TJBot listen and output the text into the console? You've completed this challenge.

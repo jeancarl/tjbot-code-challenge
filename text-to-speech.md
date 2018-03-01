@@ -4,9 +4,9 @@ TJBot can speak using the speaker and with the help of the [Watson Text to Speec
 
 ## Create a Watson Text to Speech service
 
-1. Sign up for an IBM Bluemix account at [bluemix.net](https://bluemix.net). If you already have an IBM Bluemix account, sign in.
+1. Sign up for an IBM Cloud account at [bluemix.net](https://bluemix.net). If you already have an IBM Cloud account, sign in.
 
-2. Click on the __Catalog__ link in the top right corner of the Bluemix dashboard.
+2. Click on the __Catalog__ link in the top right corner of the IBM Cloud dashboard.
 
 3. Select the __Text to Speech__ service tile under the __Watson__ section of the catalog.
 
@@ -18,11 +18,9 @@ TJBot can speak using the speaker and with the help of the [Watson Text to Speec
 
 	![](assets/sidebar-tts.png)
 	
-6. Click on __View Credentials__ to display the credentials. Copy the username and password credentials into the `.env` file in the simulator.
+6. Click on __View Credentials__ to display the credentials (note: if no credentials are listed, click on __New credential__ to create a new set). Copy the username and password credentials into the `.env` file in the simulator.
 
 	![](assets/servicecredentials-tts.png)
-	
-.env file
 
 ```
 TEXT_TO_SPEECH_USERNAME=
@@ -54,7 +52,7 @@ For each step, REPLACE the placeholders `/* step ## */` with the suggested code.
 	/* step #6 */
 	```
 
-1. Enable TJBot to use the speaker hardware by adding the string `"speaker"` as an array element.
+2. Enable TJBot to use the speaker hardware by adding the string `"speaker"` as an array element.
 	
 	```
 	var tj = new TJBot(
@@ -64,7 +62,7 @@ For each step, REPLACE the placeholders `/* step ## */` with the suggested code.
 	...
 	```
 	
-1. Give the TJBot a gender, `male` or `female`. This will determine the gender of the voice used to synthesize the text.
+3. Give the TJBot a gender, `male` or `female`. This will determine the gender of the voice used to synthesize the text.
 
 	```
 	...
@@ -74,7 +72,7 @@ For each step, REPLACE the placeholders `/* step ## */` with the suggested code.
 	...
 	```	    
 
-1. Configure the language TJBot should speak. In this challenge, use `en-US`
+4. Configure the language TJBot should speak. In this challenge, use `en-US`
 
 	```
 	    speak: {
@@ -82,7 +80,7 @@ For each step, REPLACE the placeholders `/* step ## */` with the suggested code.
 	    }
 	```
 	
-1. Configure the Watson Text to Speech credentials TJBot should use to speak. Earlier we stored them into an environment variable. 
+5. Configure the Watson Text to Speech credentials TJBot should use to speak. Earlier we stored them into an environment variable. 
 
 	```
 	  text_to_speech: {
@@ -91,10 +89,10 @@ For each step, REPLACE the placeholders `/* step ## */` with the suggested code.
 	  }
 	```
 	
-1. We now have a TJBot configured to speak. Call the `speak` method and have it say `Hello`.
+6. We now have a TJBot configured to speak. Call the `speak` method and have it say `Hello`.
 
 	```
 	tj.speak("Hello");	
 	```
 	
-1. Run the code by clicking on the play icon. Did TJBot say hello? You've completed this challenge.
+7. Run the code by clicking on the play icon. Did TJBot say hello? You've completed this challenge.

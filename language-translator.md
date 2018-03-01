@@ -4,9 +4,9 @@ TJBot can translate content with the help of the [Watson Language Translator Ser
 
 ## Create a Watson Language Translator service
 
-1. Sign up for an IBM Bluemix account at [bluemix.net](https://bluemix.net). If you already have an IBM Bluemix account, sign in.
+1. Sign up for an IBM Cloud account at [bluemix.net](https://bluemix.net). If you already have an IBM Cloud account, sign in.
 
-2. Click on the __Catalog__ link in the top right corner of the Bluemix dashboard.
+2. Click on the __Catalog__ link in the top right corner of the IBM Cloud dashboard.
 
 3. Select the __Language Translator__ service tile under the __Watson__ section of the catalog.
 
@@ -17,7 +17,7 @@ TJBot can translate content with the help of the [Watson Language Translator Ser
 
 	![](assets/sidebar-lt.png)
 	
-6. Click on __View Credentials__ to display the credentials. Copy the username and password credentials into the `.env` file in the simulator.
+6. Click on __View Credentials__ to display the credentials (note: if no credentials are listed, click on __New credential__ to create a new set). Copy the username and password credentials into the `.env` file in the simulator.
 
 	![](assets/servicecredentials-lt.png)
 	
@@ -40,7 +40,7 @@ For each step, REPLACE the placeholders `/* step ## */` with the suggested code.
 	/* step #3 */
 	```
 		
-1. Configure the Watson Language Translator credentials TJBot should use to listen. Earlier we stored them into an environment variable. 
+2. Configure the Watson Language Translator credentials TJBot should use to listen. Earlier we stored them into an environment variable. 
 
 	```
 	  language_translator: {
@@ -49,7 +49,7 @@ For each step, REPLACE the placeholders `/* step ## */` with the suggested code.
 	  }
 	```
 	
-1. We now have a TJBot configured to translate content. Call the `translate` method with the content and source and destination language codes. When TJBot translates the text, a callback function will be passed the text TJBot translated. 
+3. We now have a TJBot configured to translate content. Call the `translate` method with the content and source and destination language codes. When TJBot translates the text, a callback function will be passed the text TJBot translated. 
 
 	```
 	tj.translate("Hello", "en", "fr")
@@ -58,4 +58,4 @@ For each step, REPLACE the placeholders `/* step ## */` with the suggested code.
 	  });
 	```
 	
-1. Run the code by clicking on the play icon. Did TJBot translate the content and output the text into the console? You've completed this challenge.
+4. Run the code by clicking on the play icon. Did TJBot translate the content and output the text into the console? You've completed this challenge.
