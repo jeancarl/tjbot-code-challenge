@@ -11,13 +11,13 @@ TJBot can speak using the speaker and with the help of the [Watson Text to Speec
 3. Select the __Text to Speech__ service tile under the __Watson__ section of the catalog.
 
 	![](assets/catalog-tts.png)
-	
+
 4. Click on __Create__ to create a service instance.
 
 5. Select __Service Credentials__ in the left sidebar.
 
 	![](assets/sidebar-tts.png)
-	
+
 6. Click on __View Credentials__ to display the credentials (note: if no credentials are listed, click on __New credential__ to create a new set). Copy the username and password credentials into the `.env` file in the simulator.
 
 	![](assets/servicecredentials-tts.png)
@@ -29,9 +29,9 @@ TEXT_TO_SPEECH_PASSWORD=
 
 ## Command TJBot to Speak
 
-For each step, REPLACE the placeholders `/* step ## */` with the suggested code. Do not keep any part of these placeholders in the final code! 
+For each step, REPLACE the placeholders `/* step ## */` with the suggested code. Do not keep any part of these placeholders in the final code!
 
-1. First, we create a TJBot object. Here's a template to start with. Copy the template into the `app.js` file in the simulator. 
+1. First, we create a TJBot object. Here's a template to start with. Copy the template into the `app.js` file in the simulator.
 
 	```
 	var tj = new TJBot(
@@ -43,25 +43,25 @@ For each step, REPLACE the placeholders `/* step ## */` with the suggested code.
 	    speak: {
 	      language: "/* step #4 */"
 	    }
-	  }, 
+	  },
 	  {
-	  	/* step #5 */
+	    /* step #5 */
 	  }
 	);
-	
+
 	/* step #6 */
 	```
 
 2. Enable TJBot to use the speaker hardware by adding the string `"speaker"` as an array element.
-	
+
 	```
 	var tj = new TJBot(
-	  ["speaker"], 
+	  ["speaker"],
 	  {
 	    robot: {
 	...
 	```
-	
+
 3. Give the TJBot a gender, `male` or `female`. This will determine the gender of the voice used to synthesize the text.
 
 	```
@@ -79,8 +79,8 @@ For each step, REPLACE the placeholders `/* step ## */` with the suggested code.
 	      language: "en-US"
 	    }
 	```
-	
-5. Configure the Watson Text to Speech credentials TJBot should use to speak. Earlier we stored them into an environment variable. 
+
+5. Configure the Watson Text to Speech credentials TJBot should use to speak. Earlier we stored them into an environment variable.
 
 	```
 	  text_to_speech: {
@@ -88,11 +88,11 @@ For each step, REPLACE the placeholders `/* step ## */` with the suggested code.
 	    password: process.env.TEXT_TO_SPEECH_PASSWORD
 	  }
 	```
-	
+
 6. We now have a TJBot configured to speak. Call the `speak` method and have it say `Hello`.
 
 	```
-	tj.speak("Hello");	
+	tj.speak("Hello");
 	```
-	
+
 7. Run the code by clicking on the play icon. Did TJBot say hello? You've completed this challenge.

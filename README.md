@@ -28,11 +28,11 @@ var tj = new TJBot(
     }
   },
   { // service credentials for the Watson services that are used
-	  text_to_speech: {
-	    username: process.env.TEXT_TO_SPEECH_USERNAME,
-	    password: process.env.TEXT_TO_SPEECH_PASSWORD
-	  }
+	text_to_speech: {
+	  username: process.env.TEXT_TO_SPEECH_USERNAME,
+	  password: process.env.TEXT_TO_SPEECH_PASSWORD
 	}
+  }
 );
 
 // use the methods available from the TJBot object.

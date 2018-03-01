@@ -11,54 +11,54 @@ TJBot can recognize objects and colors in an image with the help of the [Watson 
 3. Select the __Visual Recognition__ service tile under the __Watson__ section of the catalog.
 
 	![](assets/catalog-vr.png)
-	
-4. Click on __Create__ to create a service instance.	
+
+4. Click on __Create__ to create a service instance.
 5. Select __Service Credentials__ in the left sidebar.
 
 	![](assets/sidebar-stt.png)
-	
+
 6. Click on __View Credentials__ to display the credentials (note: if no credentials are listed, click on __New credential__ to create a new set). Copy the api_key credential into the `.env` file in the simulator.
 
 	![](assets/servicecredentials-vr.png)
-	
+
 ```
 VISUAL_RECOGNITION_API_KEY=
 ```
 
 ## Command TJBot to Translate Content
 
-For each step, REPLACE the placeholders `/* step ## */` with the suggested code. Do not keep any part of these placeholders in the final code! 
+For each step, REPLACE the placeholders `/* step ## */` with the suggested code. Do not keep any part of these placeholders in the final code!
 
-1. First, we create a TJBot object. Here's a template to start with. Copy the template into the `app.js` file in the simulator. 
+1. First, we create a TJBot object. Here's a template to start with. Copy the template into the `app.js` file in the simulator.
 
 	```
 	var tj = new TJBot(
-		[/* step #2 */],
-		{}, 
-		{
-		  /* step #3 */
-		}
+	  [/* step #2 */],
+	  {},
+	  {
+	    /* step #3 */
+	  }
 	);
-	
+
 	/* step #4 */
 	```
-		
+
 2. Enable TJBot to use the camera hardware by adding the string `"camera"` as an array element.
-	
+
 	```
 	var tj = new TJBot(
-	  ["camera"], 
+	  ["camera"],
 	  {},
 	```
-			
-3. Configure the Watson Visual Recognition credentials TJBot should use to classify the image. Earlier we stored them into an environment variable. 
+
+3. Configure the Watson Visual Recognition credentials TJBot should use to classify the image. Earlier we stored them into an environment variable.
 
 	```
 	  visual_recognition: {
 	    api_key: process.env.VISUAL_RECOGNITION_API_KEY
 	  }
 	```
-	
+
 4. We now have a TJBot configured to recognize objects. Call the `see` method. This will use the webcam, capture a picture, and classify it with the Watson Visual Recogntion service. A callback function will be passed an array of objects and confidence scores.
 
 	```
@@ -66,5 +66,5 @@ For each step, REPLACE the placeholders `/* step ## */` with the suggested code.
 	  console.log(objects);
 	});
 	```
-	
+
 5. Run the code by clicking on the play icon. Did TJBot recognize objects and colors, and output the results into the console? You've completed this challenge.
