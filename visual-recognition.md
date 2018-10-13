@@ -4,22 +4,27 @@ TJBot can recognize objects and colors in an image with the help of the [Watson 
 
 ## Create a Watson Visual Recognition service
 
-1. Sign up for an IBM Cloud account at [bluemix.net](https://bluemix.net). If you already have an IBM Cloud account, sign in.
+1. [Sign up](https://ibm.biz/tjbot-challenge-signup) for an IBM Cloud account. If you already have an IBM Cloud account, sign in.
 
 2. Click on the __Catalog__ link in the top right corner of the IBM Cloud dashboard.
 
-3. Select the __Visual Recognition__ service tile under the __Watson__ section of the catalog.
+	![](assets/catalog.png)
+
+3. Select the __Visual Recognition__ service tile under the __AI__ section of the catalog.
 
 	![](assets/catalog-vr.png)
 
 4. Click on __Create__ to create a service instance.
-5. Select __Service Credentials__ in the left sidebar.
 
-	![](assets/sidebar-stt.png)
+	![](assets/create-vr.png)
 
-6. Click on __View Credentials__ to display the credentials (note: if no credentials are listed, click on __New credential__ to create a new set). Copy the api_key credential into the `.env` file in the simulator.
+5. Click __Show Credentials__.
 
 	![](assets/servicecredentials-vr.png)
+
+6. Copy the api_key credential into the `.env` file in the simulator.
+
+	![](assets/credentials-vr.png)
 
 ```
 VISUAL_RECOGNITION_API_KEY=

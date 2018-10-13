@@ -4,26 +4,30 @@ TJBot can translate content with the help of the [Watson Language Translator Ser
 
 ## Create a Watson Language Translator service
 
-1. Sign up for an IBM Cloud account at [bluemix.net](https://bluemix.net). If you already have an IBM Cloud account, sign in.
+1. [Sign up](https://ibm.biz/tjbot-challenge-signup) for an IBM Cloud account. If you already have an IBM Cloud account, sign in.
 
 2. Click on the __Catalog__ link in the top right corner of the IBM Cloud dashboard.
 
-3. Select the __Language Translator__ service tile under the __Watson__ section of the catalog.
+	![](assets/catalog.png)
+
+3. Select the __Language Translator__ service tile under the __AI__ section of the catalog.
 
 	![](assets/catalog-lt.png)
 	
-4. Click on __Create__ to create a service instance.	
-5. Select __Service Credentials__ in the left sidebar.
+4. Click on __Create__ to create a service instance.
 
-	![](assets/sidebar-lt.png)
-	
-6. Click on __View Credentials__ to display the credentials (note: if no credentials are listed, click on __New credential__ to create a new set). Copy the username and password credentials into the `.env` file in the simulator.
+	![](assets/create-lt.png)	
+
+5. Click __Show Credentials__.
 
 	![](assets/servicecredentials-lt.png)
 	
+6. Copy the API Key credentials into the `.env` file in the simulator.
+
+	![](assets/credentials-lt.png)
+	
 ```
-LANGUAGE_TRANSLATOR_USERNAME=
-LANGUAGE_TRANSLATOR_PASSWORD=
+LANGUAGE_TRANSLATOR_API_KEY=
 ```
 
 ## Command TJBot to Translate Content
@@ -44,8 +48,7 @@ For each step, REPLACE the placeholders `/* step ## */` with the suggested code.
 
 	```
 	  language_translator: {
-	    username: process.env.LANGUAGE_TRANSLATOR_USERNAME,
-	    password: process.env.LANGUAGE_TRANSLATOR_PASSWORD
+	    iam_apikey: LANGUAGE_TRANSLATOR_API_KEY
 	  }
 	```
 	

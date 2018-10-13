@@ -4,22 +4,27 @@ TJBot can listen using the microphone and with the help of the [Watson Speech to
 
 ## Create a Watson Speech to Text service
 
-1. Sign up for an IBM Cloud account at [bluemix.net](https://bluemix.net). If you already have an IBM Cloud account, sign in.
+1. [Sign up](https://ibm.biz/tjbot-challenge-signup) for an IBM Cloud account. If you already have an IBM Cloud account, sign in.
 
 2. Click on the __Catalog__ link in the top right corner of the IBM Cloud dashboard.
 
-3. Select the __Speech to Text__ service tile under the __Watson__ section of the catalog.
+	![](assets/catalog.png)
+
+3. Select the __Speech to Text__ service tile under the __AI__ section of the catalog.
 
 	![](assets/catalog-stt.png)
 	
-4. Click on __Create__ to create a service instance.	
-5. Select __Service Credentials__ in the left sidebar.
+4. Click on __Create__ to create a service instance.
 
-	![](assets/sidebar-tts.png)
-	
-6. Click on __View Credentials__ to display the credentials (note: if no credentials are listed, click on __New credential__ to create a new set). Copy the username and password credentials into the `.env` file in the simulator.
+	![](assets/create-stt.png)
+
+5. Click __Show Credentials__.
 
 	![](assets/servicecredentials-stt.png)
+	
+6. Copy the username and password credentials into the `.env` file in the simulator.
+
+	![](assets/credentials-stt.png)
 	
 ```
 SPEECH_TO_TEXT_USERNAME=
