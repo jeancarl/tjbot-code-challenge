@@ -60,7 +60,7 @@ For each step, REPLACE the placeholders `/* step ## */` with the suggested code.
 
 	```
 	  visual_recognition: {
-	    api_key: process.env.VISUAL_RECOGNITION_API_KEY
+	    apikey: process.env.VISUAL_RECOGNITION_API_KEY
 	  }
 	```
 

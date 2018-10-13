@@ -48,7 +48,7 @@ For each step, REPLACE the placeholders `/* step ## */` with the suggested code.
 
 	```
 	  language_translator: {
-	    iam_apikey: LANGUAGE_TRANSLATOR_API_KEY
+	    apikey: LANGUAGE_TRANSLATOR_API_KEY
 	  }
 	```
 	
