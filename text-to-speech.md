@@ -16,19 +16,18 @@ TJBot can speak using the speaker and with the help of the [Watson Text to Speec
 
 4. Click on __Create__ to create a service instance.
 
-	![](assets/create-ta.png)
+	![](assets/create-tts.png)
 
 5. Click __Show Credentials__.
 
 	![](assets/servicecredentials-tts.png)
 
-6. Copy the username and password credentials into the `.env` file in the simulator.
+6. Copy the API Key credential credentials into the `.env` file in the simulator.
 
 	![](assets/credentials-tts.png)
 
 ```
-TEXT_TO_SPEECH_USERNAME=
-TEXT_TO_SPEECH_PASSWORD=
+TEXT_TO_SPEECH_API_KEY=
 ```
 
 ## Command TJBot to Speak
@@ -88,8 +87,7 @@ For each step, REPLACE the placeholders `/* step ## */` with the suggested code.
 
 	```
 	  text_to_speech: {
-	    username: process.env.TEXT_TO_SPEECH_USERNAME,
-	    password: process.env.TEXT_TO_SPEECH_PASSWORD
+	    apikey: process.env.TEXT_TO_SPEECH_API_KEY
 	  }
 	```
 

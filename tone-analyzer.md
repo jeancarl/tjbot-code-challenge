@@ -22,13 +22,12 @@ TJBot can analyze the emotion of text with the help of the [Watson Tone Analyzer
 
 	![](assets/servicecredentials-ta.png)
 
-6. Copy the username and password credentials into the `.env` file in the simulator.
+6. Copy the API Key credential into the `.env` file in the simulator.
 
 	![](assets/credentials-ta.png)
 
 ```
-TONE_ANALYZER_USERNAME=
-TONE_ANALYZER_PASSWORD=
+TONE_ANALYZER_API_KEY=
 ```
 
 ## Command TJBot to Analyze Emotion
@@ -61,8 +60,7 @@ For each step, REPLACE the placeholders `/* step ## */` with the suggested code.
 
 	```
 	  tone_analyzer: {
-	    username: process.env.TONE_ANALYZER_USERNAME,
-	    password: process.env.TONE_ANALYZER_PASSWORD
+	    apikey: process.env.TONE_ANALYZER_API_KEY
 	  }
 	```
 

@@ -22,7 +22,7 @@ TJBot can translate content with the help of the [Watson Language Translator Ser
 
 	![](assets/servicecredentials-lt.png)
 	
-6. Copy the API Key credentials into the `.env` file in the simulator.
+6. Copy the API Key credential into the `.env` file in the simulator.
 
 	![](assets/credentials-lt.png)
 	

@@ -22,13 +22,12 @@ TJBot can listen using the microphone and with the help of the [Watson Speech to
 
 	![](assets/servicecredentials-stt.png)
 	
-6. Copy the username and password credentials into the `.env` file in the simulator.
+6. Copy the API Key credential into the `.env` file in the simulator.
 
 	![](assets/credentials-stt.png)
 	
 ```
-SPEECH_TO_TEXT_USERNAME=
-SPEECH_TO_TEXT_PASSWORD=
+SPEECH_TO_TEXT_API_KEY=
 ```
 
 ## Command TJBot to Listen
@@ -62,8 +61,7 @@ For each step, REPLACE the placeholders `/* step ## */` with the suggested code.
 
 	```
 	    speech_to_text: {
-	      username: process.env.SPEECH_TO_TEXT_USERNAME,
-	      password: process.env.SPEECH_TO_TEXT_PASSWORD
+	      apikey: process.env.SPEECH_TO_TEXT_API_KEY
 	    }
 	```
 	

@@ -22,7 +22,7 @@ TJBot can recognize objects and colors in an image with the help of the [Watson 
 
 	![](assets/servicecredentials-vr.png)
 
-6. Copy the api_key credential into the `.env` file in the simulator.
+6. Copy the API Key credential into the `.env` file in the simulator.
 
 	![](assets/credentials-vr.png)
 
